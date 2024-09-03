@@ -1,0 +1,37 @@
+/* ConsultationButton.css */
+.consultation-button {
+    position: fixed; /* 뷰포트 기준으로 고정 */
+    bottom: 20px; /* 화면 하단에서 20px 위에 위치 */
+    right: 20px; /* 화면 우측에서 20px 왼쪽에 위치 */
+    padding: 20px 30px; /* 버튼 크기를 키웠습니다 */
+    background-color: rgba(0, 123, 255, 0.9); /* 살짝 투명하게 설정 */
+    color: white;
+    font-size: 1.2rem; /* 폰트 크기를 키웠습니다 */
+    font-weight: bold;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* 그림자를 키워 버튼이 더 두드러지게 */
+    cursor: pointer;
+    z-index: 1000; /* 버튼이 다른 요소 위에 있도록 z-index 설정 */
+    transition: background-color 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8; /* 기본 투명도 설정 */
+  }
+  
+  .consultation-button:hover {
+    background-color: rgba(0, 86, 179, 0.9); /* 호버 시 배경색을 더 진하게 */
+    transform: translateY(-5px) scale(1.05); /* 버튼이 살짝 위로 올라가고 커지도록 설정 */
+    opacity: 1; /* 호버 시 투명도를 제거 */
+  }
+  
+  .consultation-button:active {
+    transform: translateY(-2px) scale(1); /* 클릭 시 버튼이 약간 내려오도록 */
+    opacity: 0.9; /* 클릭 시 살짝 투명도 추가 */
+  }
+  
+  @media (max-width: 768px) {
+    .consultation-button {
+      padding: 15px 20px; /* 작은 화면에서는 버튼 크기를 조금 줄임 */
+      font-size: 1rem;
+    }
+  }
+  
