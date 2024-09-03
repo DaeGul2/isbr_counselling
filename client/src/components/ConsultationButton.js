@@ -8,7 +8,7 @@ function ConsultationButton() {
 
   return (
     <button className="consultation-button" onClick={handleClick}>
-      상담신청
+      상담신청하기
     </button>
   );
 }
