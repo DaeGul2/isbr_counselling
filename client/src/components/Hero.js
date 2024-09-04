@@ -16,8 +16,9 @@ function Hero() {
       }}
     >
       <div className="container text-center">
-        <h1>We are With Your Mission</h1>
-        <p>with devotion and commitment,<br /> we embody our mission – Dream Shelter Charity</p>
+        <h1>인사 ㆍ 채용컨설팅 서비스의
+        바른 기준을 제시합니다.</h1>
+        <p></p>
       </div>
     </section>
   );

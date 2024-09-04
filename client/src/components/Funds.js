@@ -5,18 +5,15 @@ function Funds() {
   return (
     <section className="funds-stats py-5">
       <div className="container text-center">
-        <h2>OUR FUNDS</h2>
+        <h2>OUR MEMBERS</h2>
         <div className="row">
           <div className="col-md-4">
-            <h3>19</h3>
-            <p>Number of Funds</p>
+            <h3>1000+</h3>
+            <p>Number of Experts</p>
           </div>
+          
           <div className="col-md-4">
-            <h3>₩12,035억</h3>
-            <p>AUM</p>
-          </div>
-          <div className="col-md-4">
-            <h3>264</h3>
+            <h3>50+</h3>
             <p>Partnered Companies</p>
           </div>
         </div>
