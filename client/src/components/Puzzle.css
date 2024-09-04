@@ -1,0 +1,74 @@
+
+.puzzle-container {
+    position: relative;
+    width: 100%;
+    height: 750px; /* 세로 크기 확대 */
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+  }
+  
+  /* 퍼즐 조각들 */
+  .puzzle-piece {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    opacity: 1; /* 투명도를 절반으로 설정 */
+    transition: all 1s ease-in-out; /* 애니메이션 속도 */
+  }
+  
+  /* 퍼즐 SVG 모양 */
+  .puzzle-svg {
+    fill: #00ff99; /* 퍼즐 색상 */
+    opacity: 0.8;
+    filter: drop-shadow(0px 0px 5px rgba(0, 255, 255, 0.9)); /* 빛나는 효과 */
+    animation: glow 2s infinite; /* 빛나는 효과를 계속 유지 */
+  }
+  
+  /* 초기 상태 - 퍼즐은 중앙에 모인 상태에서 시작 */
+  .puzzle-piece.assembled {
+    transform: translate(0, 0) rotate(0deg); /* 퍼즐이 중앙에 모임 */
+  }
+  
+  /* 퍼즐이 흩어질 때 (assembled 클래스가 제거되었을 때) */
+  .puzzle-piece {
+    /* 퍼즐이 흩어질 때도 반짝거림 유지 */
+    animation: glow 2s infinite; /* 흩어진 후에도 빛나는 효과 유지 */
+  }
+  
+  /* 각 퍼즐 조각의 흩어진 초기 위치 */
+  .piece1 { transform: translate(-350px, -250px) rotate(0deg); }
+  .piece2 { transform: translate(350px, -300px) rotate(45deg); }
+  .piece3 { transform: translate(-400px, 300px) rotate(-45deg); }
+  .piece4 { transform: translate(400px, 250px) rotate(90deg); }
+  .piece5 { transform: translate(-150px, -400px) rotate(120deg); }
+  .piece6 { transform: translate(300px, -350px) rotate(160deg); }
+  .piece7 { transform: translate(200px, 400px) rotate(-120deg); }
+  .piece8 { transform: translate(-450px, 200px) rotate(-90deg); }
+  .piece9 { transform: translate(500px, -150px) rotate(30deg); }
+  .piece10 { transform: translate(-350px, -100px) rotate(-60deg); }
+  .piece11 { transform: translate(200px, 300px) rotate(20deg); }
+  .piece12 { transform: translate(-250px, 100px) rotate(-20deg); }
+  .piece13 { transform: translate(150px, -450px) rotate(70deg); }
+  .piece14 { transform: translate(-200px, 450px) rotate(-30deg); }
+  .piece15 { transform: translate(500px, 100px) rotate(100deg); }
+  .piece16 { transform: translate(-450px, -350px) rotate(140deg); }
+  .piece17 { transform: translate(350px, 400px) rotate(-90deg); }
+  .piece18 { transform: translate(-300px, -450px) rotate(160deg); }
+  .piece19 { transform: translate(250px, -250px) rotate(200deg); }
+  .piece20 { transform: translate(-500px, 200px) rotate(220deg); }
+  .piece21 { transform: translate(400px, 500px) rotate(-140deg); }
+  .piece22 { transform: translate(-600px, -100px) rotate(-60deg); }
+  .piece23 { transform: translate(550px, -300px) rotate(80deg); }
+  .piece24 { transform: translate(-350px, 350px) rotate(-160deg); }
+  
+  /* 빛나는 애니메이션 효과 */
+  @keyframes glow {
+    0% { filter: drop-shadow(0px 0px 5px rgba(0, 255, 255, 0.3)); }
+    50% { filter: drop-shadow(0px 0px 15px rgba(0, 255, 255, 1)); }
+    100% { filter: drop-shadow(0px 0px 5px rgba(0, 255, 255, 0.3)); }
+  }
+  

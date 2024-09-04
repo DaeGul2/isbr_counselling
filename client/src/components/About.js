@@ -1,7 +1,7 @@
 // About.js
 import React from "react";
 import './About.css';
-import aboutVideo from '../assets/videos/about.mp4'; // 동영상 경로
+import aboutVideo from '../assets/videos/about2.mp4'; // 동영상 경로
 
 function About() {
   return (
