@@ -1,198 +1,89 @@
-/* 기본적인 다크 테마 설정 */
+/* 기본적인 다크 테마 설정은 유지 */
 body, html {
   margin: 0;
   padding: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #000;
+  background: linear-gradient(180deg, #000 0%, #1a1a1a 100%); /* 위에서 아래로 그라데이션 */
   color: #fff;
+  height: 100%;
 }
+
 
 .App {
   text-align: center;
   background-color: #000;
 }
 
-/* 네비게이션 바 */
-header {
-  background-color: #000;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  transition: top 0.3s ease-in-out;
-  border-bottom: 1px solid #333;
+/* 공통 애니메이션 클래스 */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
-header img {
-  height: 40px;
-  margin-right: 10px;
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-header a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 20px;
-}
-
-header a:hover {
-  color: #00ff99;
-}
-
-/* 히어로 섹션 */
+/* Hero 섹션 */
 .hero {
   height: 100vh;
-  background: url('./assets/images/background.png') no-repeat center center/cover;
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
 }
 
 .hero h1 {
   font-size: 3rem;
-  font-weight: bold;
+  color: #fff;
 }
 
 .hero p {
   font-size: 1.5rem;
   margin-top: 20px;
-}
-
-/* About 섹션 */
-.about-us {
-  padding: 60px 0;
-  text-align: center;
-}
-
-.about-us h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.about-us p {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  color: #00ff99;
 }
 
 /* Funds 섹션 */
 .funds-stats {
-  padding: 60px 0;
   background-color: #111;
-  color: #fff;
-  text-align: center;
+  padding: 60px 0;
 }
 
 .funds-stats h3 {
   font-size: 2rem;
   margin: 20px 0;
+  color: #fff;
+}
+
+/* Philosophy 섹션 */
+.philosophy {
+  padding: 60px 0;
+  background-color: #000;
+}
+
+.philosophy h2, .philosophy p {
+  color: #fff;
 }
 
 /* Location 섹션 */
 .location {
   padding: 60px 0;
   background-color: #000;
-  text-align: center;
 }
 
-.location h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+.location img {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
 }
 
 .location p {
   font-size: 1.2rem;
   margin-top: 20px;
-}
-
-/* Philosophy 섹션 */
-.philosophy {
-  padding: 60px 0;
-  background-color: #111;
-  text-align: center;
-}
-
-.philosophy h2 {
-  font-size: 2.5rem;
-}
-
-.philosophy p {
-  font-size: 1.2rem;
-  margin-top: 20px;
-}
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: #fff;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-  font-size: 0.9rem;
-}
-
-footer a {
   color: #00ff99;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-/* 상담 버튼 */
-.consultation-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 15px 25px;
-  background-color: #00ff99;
-  color: #000;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-}
-
-.consultation-button:hover {
-  background-color: #fff;
-  color: #00ff99;
-}
-
-/* 비디오 섹션 */
-.section-with-video {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-}
-
-.background-video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-}
-
-.content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 1s ease-out, transform 1s ease-out;
-}
-
-.content.fade-in {
-  opacity: 1;
-  transform: translateY(0);
 }

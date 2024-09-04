@@ -1,14 +1,40 @@
 .about-us {
   position: relative;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  background-color: #1a1a1a; /* 다크한 배경 */
   padding: 60px 0;
-  background-color: #f8f9fa; /* 기본 배경색 추가 */
 }
+
+.about-us .background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0.3; /* 동영상에 투명도를 줘서 다크한 느낌 */
+  filter: blur(3px); /* 블러 효과로 모던한 느낌 추가 */
+}
+
+.about-us .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.about-us .content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 
 .background-video {
   position: absolute;

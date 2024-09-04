@@ -1,12 +1,13 @@
+// About.js
 import React from "react";
-import SectionWithVideo from "./SectionWithVideo";
-import "./About.css";
-import aboutVideo from '../assets/videos/about.mp4'; // 동영상 파일을 import
+import './About.css';
+import aboutVideo from '../assets/videos/about.mp4'; // 동영상 경로
 
 function About() {
   return (
-    <SectionWithVideo id="about" videoSrc={aboutVideo}>
-      <div className="container">
+    <section className="about-us">
+      <video className="background-video" src={aboutVideo} autoPlay muted loop />
+      <div className="content animate-on-scroll">
         <h2>ABOUT US</h2>
         <div className="row">
           <div className="col-md-4">
@@ -23,7 +24,7 @@ function About() {
           </div>
         </div>
       </div>
-    </SectionWithVideo>
+    </section>
   );
 }
 

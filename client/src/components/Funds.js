@@ -1,9 +1,10 @@
+// Funds.js
 import React from "react";
 import "./Funds.css";
 
 function Funds() {
   return (
-    <section className="funds-stats py-5">
+    <section className="funds-stats py-5 animate-on-scroll">
       <div className="container text-center">
         <h2>OUR FUNDS</h2>
         <div className="row">
