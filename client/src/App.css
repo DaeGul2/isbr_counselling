@@ -1,39 +1,198 @@
+/* 기본적인 다크 테마 설정 */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
 .App {
   text-align: center;
-  filter: brightness(0.9); /* 전체 페이지의 밝기를 90%로 설정 */
+  background-color: #000;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 네비게이션 바 */
+header {
+  background-color: #000;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+  border-bottom: 1px solid #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header img {
+  height: 40px;
+  margin-right: 10px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+header a:hover {
+  color: #00ff99;
+}
+
+/* 히어로 섹션 */
+.hero {
+  height: 100vh;
+  background: url('./assets/images/background.png') no-repeat center center/cover;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+}
+
+/* About 섹션 */
+.about-us {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.about-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.about-us p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+/* Funds 섹션 */
+.funds-stats {
+  padding: 60px 0;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+}
+
+.funds-stats h3 {
+  font-size: 2rem;
+  margin: 20px 0;
+}
+
+/* Location 섹션 */
+.location {
+  padding: 60px 0;
+  background-color: #000;
+  text-align: center;
+}
+
+.location h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.location p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Philosophy 섹션 */
+.philosophy {
+  padding: 60px 0;
+  background-color: #111;
+  text-align: center;
+}
+
+.philosophy h2 {
+  font-size: 2.5rem;
+}
+
+.philosophy p {
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #00ff99;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* 상담 버튼 */
+.consultation-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  background-color: #00ff99;
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.consultation-button:hover {
+  background-color: #fff;
+  color: #00ff99;
+}
+
+/* 비디오 섹션 */
+.section-with-video {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.content.fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
