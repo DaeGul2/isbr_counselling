@@ -20,7 +20,7 @@ function Location() {
           const map = new window.kakao.maps.Map(container, options);
 
           // 마커 추가
-          const markerPosition = new window.kakao.maps.LatLng(37.2917, 127.0466);
+          const markerPosition = new window.kakao.maps.LatLng(37.295402, 127.037166);
           const marker = new window.kakao.maps.Marker({
             position: markerPosition
           });
