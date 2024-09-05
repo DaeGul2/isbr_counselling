@@ -2,6 +2,7 @@
 import React, { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import Hero2 from './components/Hero2';
 import About from './components/About';
 import Funds from './components/Funds';
 import Philosophy from './components/Philosophy';
@@ -10,6 +11,7 @@ import Footer from './components/Footer';
 import ConsultationButton from './components/ConsultationButton';
 import Puzzle from './components/Puzzle'; // Puzzle 컴포넌트 추가
 import './App.css';
+
 
 function App() {
   // 스크롤 애니메이션 적용 함수
@@ -55,6 +57,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <Hero2 />
       <Hero />
       <Puzzle /> {/* 퍼즐 애니메이션 컴포넌트 */}
       <About />

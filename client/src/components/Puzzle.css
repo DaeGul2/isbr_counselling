@@ -38,6 +38,8 @@
     /* 퍼즐이 흩어질 때도 반짝거림 유지 */
     animation: glow 2s infinite; /* 흩어진 후에도 빛나는 효과 유지 */
   }
+
+  
   
   /* 각 퍼즐 조각의 흩어진 초기 위치 */
   .piece1 { transform: translate(-350px, -250px) rotate(0deg); }
